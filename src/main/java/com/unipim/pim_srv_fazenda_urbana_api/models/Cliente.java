@@ -1,32 +1,20 @@
 package com.unipim.pim_srv_fazenda_urbana_api.models;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
+//import jakarta.validation.constraints.NotNull;
 
-import java.io.Serializable;
 import java.util.Date;
 
-@Entity
-@Table
-public class Cliente implements Serializable {
-
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class Cliente {
+    
     private Integer id;
-    @NotNull
-    @NotBlank
+
     public String nome;
-    @NotNull
+
     public String cpf;
     public String cnpj;
-    @NotNull
     public Date dataNascimento;
     public String celular;
-    @NotNull
     public String email;
-    @NotNull
     public String senha;
     private Boolean premium;
     private String imagem;

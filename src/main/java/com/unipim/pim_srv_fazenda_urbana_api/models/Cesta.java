@@ -1,10 +1,9 @@
 package com.unipim.pim_srv_fazenda_urbana_api.models;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cesta implements Serializable {
+public class Cesta {
 
     private Integer id;
     private List<Produto> produtos = new ArrayList<>();

@@ -1,9 +1,6 @@
 package com.unipim.pim_srv_fazenda_urbana_api.models;
 
-import java.io.Serializable;
-
-public class Produto implements Serializable {
-
+public class Produto {
     public int id;
     public String nome;
     public double preco;

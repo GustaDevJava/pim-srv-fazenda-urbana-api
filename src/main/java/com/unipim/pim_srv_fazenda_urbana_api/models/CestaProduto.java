@@ -1,8 +1,6 @@
 package com.unipim.pim_srv_fazenda_urbana_api.models;
 
-import java.io.Serializable;
-
-public class CestaProduto implements Serializable {
+public class CestaProduto {
 
     private Integer idProduto;
     private  Integer idCesta;

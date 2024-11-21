@@ -1,15 +1,7 @@
-package com.unipim.pim_srv_fazenda_urbana_api.dto;
-
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
+package com.unipim.pim_srv_fazenda_urbana_api.dtos;
 
 public class Login {
-
-    @NotNull
-    @NotBlank
     private String email;
-    @NotNull
-    @NotBlank
     private String senha;
 
     private Login(){}
