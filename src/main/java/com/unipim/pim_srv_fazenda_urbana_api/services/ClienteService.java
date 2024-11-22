@@ -17,8 +17,8 @@ import com.unipim.pim_srv_fazenda_urbana_api.models.Cliente;
 public class ClienteService {
      private List<Cliente> clientes = popularListaClientes();
 
-     @Autowired
-     private ProdutoService produtoService;
+//     @Autowired
+//     private ProdutoService produtoService;
 //    @Autowired
 //    private ClienteRepository repository;
 
@@ -31,7 +31,7 @@ public class ClienteService {
 //        Optional<Cliente> cliente = null;
 //        cliente = repository.buscarPorEmailESenha(login.getEmail(), login.getSenha());
 //
-//        if(cliente.get() != null){
+//        if(cliente.get() == null){
 //           throw  new Exception("Erro ao acessar banco");
 //        }
 //        return cliente.get();
@@ -132,8 +132,8 @@ public class ClienteService {
         return  clienteList;
     }
 
-    public Produto testeAdd(Produto produto) throws Exception {
-        produtoService.addProduto(produto);
-        return produto;
-    }
+//    public Produto testeAdd(Produto produto) throws Exception {
+//        produtoService.addProduto(produto);
+//        return produto;
+//    }
 }

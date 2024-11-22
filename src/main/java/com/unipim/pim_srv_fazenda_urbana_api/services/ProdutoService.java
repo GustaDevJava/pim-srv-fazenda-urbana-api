@@ -1,14 +1,21 @@
 package com.unipim.pim_srv_fazenda_urbana_api.services;
 
 import com.unipim.pim_srv_fazenda_urbana_api.models.Produto;
+import com.unipim.pim_srv_fazenda_urbana_api.repositories.ProdutoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProdutoService {
+
+
+    @Autowired
+    private ProdutoRepository repository;
 
     List<Produto> produtos = populaProdutos();
 
@@ -19,6 +26,28 @@ public class ProdutoService {
             throw new Exception("Erro ao acessar banco");
         }
         return listaProduto;
+    }
+
+    public List<Produto> findAll() throws Exception {
+        List<Produto> produtosList = new ArrayList<>();
+        try {
+        produtosList = repository.findAll();
+
+        }catch (Exception e){
+           throw new Exception("Erro ao conectar no banco");
+        }
+        return produtosList;
+    }
+
+
+    public Produto findById(int id) throws Exception {
+        Optional<Produto> produto = null;
+        produto = repository.findById(id);
+
+        if(produto.get() == null){
+            throw new Exception("Erro ao conectar no banco");
+        }
+        return produto.get();
     }
 
     public void addProduto(Produto produto) throws Exception {

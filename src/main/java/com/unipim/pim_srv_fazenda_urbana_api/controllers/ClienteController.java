@@ -39,11 +39,11 @@ public class ClienteController {
         return ResponseEntity.ok().body(cliente);
     }
 
-    @PostMapping(path = "/cadastra-cliente")
-    public ResponseEntity<Produto> testeProd(@RequestBody Produto cliente) throws Exception {
-        service.testeAdd(cliente);
-        return ResponseEntity.ok().body(cliente);
-    }
+//    @PostMapping(path = "/cadastra-prod")
+//    public ResponseEntity<Produto> testeProd(@RequestBody Produto cliente) throws Exception {
+//        service.testeAdd(cliente);
+//        return ResponseEntity.ok().body(cliente);
+//    }
 
     @GetMapping("/clientes")
     public ResponseEntity<List<Cliente>> findAllClientes(){
